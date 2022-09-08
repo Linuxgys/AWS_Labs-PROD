@@ -26,16 +26,28 @@ body, html {
 <div class="bg"></div>
 
 
-
-<style>
-  h1 {text-align: center;}
-  p {text-align: center;}
-  div {text-align: center;}
-  <head>
-</style>
+<head>
+    <title> Blinking feature using JavaScript </title>
+    <style>
+        #blink {
+            font-size: 50px;
+            font-weight: bold;
+            color: #2d38be;
+            transition: 0.2s;
+			text-align: center;
+        }
+    </style>
 </head>
-  </style>
-<p style="font-size:70px;color:red;">AWS - Cloud Practitioner</p>
+
+<body>
+    <p id="blink"> AWS - Cloud Practitioner </p>
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+    </script>
+</body>
 
 
 <summary><b>What is cloud computing?</b></summary><br>
